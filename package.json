@@ -1,0 +1,30 @@
+{
+  "name": "fsx-copy-test",
+  "version": "1.0.0",
+  "description": "Because wonky default overwrite does not",
+  "main": "tasks/this_is_wonky.mjs",
+  "scripts": {
+    "clean": "rimraf output",
+    "wonky": "npm run clean && node --experimental-modules tasks/this_is_wonky.mjs",
+    "workaround": "npm run clean && node --experimental-modules tasks/this_works.mjs",
+    "test": "echo 'ha ha ha ha nope'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misterbrownlee/fsx-copy-test.git"
+  },
+  "keywords": [
+    "test",
+    "fs-extra"
+  ],
+  "author": "misterbrownlee",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/misterbrownlee/fsx-copy-test/issues"
+  },
+  "homepage": "https://github.com/misterbrownlee/fsx-copy-test#readme",
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "rimraf": "^2.6.2"
+  }
+}
