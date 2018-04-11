@@ -60,6 +60,7 @@ FAKE OVERWRITE.  SAD.
 
 The workaround is to call `.ensureDir(pathToCopy)` when running concurrent copy directory tasks, which makes it behave as expected.  The code for that isn't terribly cumbersom:
 ```js
+  const dest = path.resolve('output');
   const fooSrc = path.resolve('source', 'foo');
   const fooDest = path.join(dest, path.parse(fooSrc).base);
   fsx.ensureDir(fooDest).then(fsx.copy(fooSrc, dest));
